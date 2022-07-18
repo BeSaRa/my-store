@@ -14,6 +14,7 @@ import { ProductNotExistsComponent } from './components/product-not-exists/produ
 import { BadProductIdComponent } from './components/bad-product-id/bad-product-id.component';
 import { AddToCartComponent } from './components/add-to-cart/add-to-cart.component';
 import { ProductComponent } from './components/product/product.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ProductComponent } from './components/product/product.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

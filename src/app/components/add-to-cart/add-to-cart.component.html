@@ -1,10 +1,10 @@
 <div [ngClass]="{'text-center': center}" class="product-quantity pb-2">
-  <select class="py-2 px-3 rounded">
-    <option *ngFor="let item of quantity">{{item}}</option>
+  <select [ngModel]="selectedQuantity" (ngModelChange)="selectedQuantity = $event" class="py-2 px-3 rounded">
+    <option [ngValue]="item" *ngFor="let item of quantity">{{item}}</option>
   </select>
 </div>
 <div class="product-cart-button" [ngClass]="{'text-center': center}">
-  <button class="button-primary">
+  <button (click)="addToCart()" class="button-primary">
     add to cart
   </button>
 </div>
