@@ -3,16 +3,34 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { HttpClientModule } from "@angular/common/http";
+import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { ProductNotExistsComponent } from './components/product-not-exists/product-not-exists.component';
+import { BadProductIdComponent } from './components/bad-product-id/bad-product-id.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    LoginComponent,
+    ProductListComponent,
+    ProductDetailsComponent,
+    ErrorPageComponent,
+    ProductNotExistsComponent,
+    BadProductIdComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
