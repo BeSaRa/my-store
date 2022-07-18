@@ -3,6 +3,7 @@
     <a [routerLink]="['product-details', product.id]" href="#"><img class="border" src="{{product.url}}"
                                                                     alt="{{product.name}}"></a>
   </div>
-  <div class="product-name text-center pt-2">{{product.name}}</div>
+  <div class="product-name font-semibold text-2xl text-center pt-2">{{product.name}}</div>
+  <div class="product-name text-center">{{product.price|currency}}</div>
   <app-add-to-cart [center]="true" [product]="product"></app-add-to-cart>
 </div>
