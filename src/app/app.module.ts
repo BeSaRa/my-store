@@ -12,6 +12,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { ProductNotExistsComponent } from './components/product-not-exists/product-not-exists.component';
 import { BadProductIdComponent } from './components/bad-product-id/bad-product-id.component';
+import { AddToCartComponent } from './components/add-to-cart/add-to-cart.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { BadProductIdComponent } from './components/bad-product-id/bad-product-i
     ProductDetailsComponent,
     ErrorPageComponent,
     ProductNotExistsComponent,
-    BadProductIdComponent
+    BadProductIdComponent,
+    AddToCartComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

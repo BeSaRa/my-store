@@ -1,22 +1,5 @@
-<div id="products" class="flex flex-wrap gap-5 justify-center items-center">
-  <div *ngFor="let product of products" class="product flex flex-col md:w-64 py-5">
-    <div class="product-image p-3 border-2 shadow-2xl">
-      <a [routerLink]="['product-details', product.id]" href="#"><img class="border" src="{{product.url}}"
-                                                                      alt="{{product.name}}"></a>
-    </div>
-    <div class="product-name text-center pt-2">{{product.name}}</div>
-    <div class="product-quantity text-center pb-2">
-      <select class="py-2 px-3 rounded">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-      </select>
-    </div>
-    <div class="product-cart-button text-center">
-      <button class="button-primary">
-        add to cart
-      </button>
-    </div>
-  </div>
+<div id="products" class="flex flex-wrap gap-5 justify-center items-center py-10 lg:w-3/4 mx-auto">
+  <ng-container *ngFor="let product of products">
+    <app-product [product]="product"></app-product>
+  </ng-container>
 </div>
