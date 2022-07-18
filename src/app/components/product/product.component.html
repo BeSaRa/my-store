@@ -1,0 +1,8 @@
+<div class="product flex flex-col md:w-72 w-64">
+  <div class="product-image">
+    <a [routerLink]="['product-details', product.id]" href="#"><img class="border" src="{{product.url}}"
+                                                                    alt="{{product.name}}"></a>
+  </div>
+  <div class="product-name text-center pt-2">{{product.name}}</div>
+  <app-add-to-cart [center]="true" [product]="product"></app-add-to-cart>
+</div>
