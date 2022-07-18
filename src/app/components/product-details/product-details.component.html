@@ -1,3 +1,11 @@
-<div>
-
+<div class="flex flex-grow gap-6 justify-center items-start py-10">
+  <div class="product-image w-64">
+    <img class="border" [src]="product.url" [alt]="product.name">
+  </div>
+  <div id="product-details" class="flex flex-col gap-3">
+    <h1 class="text-4xl">{{product.name}}</h1>
+    <p>{{product.price | currency}}</p>
+    <p>{{product.description}}</p>
+    <app-add-to-cart [product]="product"></app-add-to-cart>
+  </div>
 </div>
