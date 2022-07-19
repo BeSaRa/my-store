@@ -3,10 +3,12 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@layer base {
+  .button-primary {
+    @apply rounded bg-blue-500 hover:bg-blue-400 py-2 px-5 shadow active:bg-blue-600 text-white hover:text-white/90
+  }
 
-.button-primary {
-  @apply rounded bg-blue-500 hover:bg-blue-400 py-2 px-5 shadow active:bg-blue-600 text-white hover:text-white/90
-}
-.product-image {
-  @apply p-3 border-2 shadow-2xl
+  .product-image {
+    @apply p-3 border-2 shadow-2xl
+  }
 }

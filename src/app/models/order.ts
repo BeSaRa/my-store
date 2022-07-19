@@ -32,8 +32,8 @@ export class Order {
       this.getItem(product).addToQuantity(quantity)
     } else {
       this.items.set(product.id, new OrderItem().clone({
+        product,
         quantity: quantity,
-        price: product.price,
         changes$: this.itemChanged$
       }))
       this.getItem(product).calculateTotal()
@@ -41,8 +41,10 @@ export class Order {
   }
 
   removeItem(product: Product): void {
+    console.log(this.items);
     this.items.delete(product.id);
     this.itemChanged$.next(null);
+    console.log(this.items);
   }
 
 

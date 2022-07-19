@@ -15,6 +15,8 @@ import { BadProductIdComponent } from './components/bad-product-id/bad-product-i
 import { AddToCartComponent } from './components/add-to-cart/add-to-cart.component';
 import { ProductComponent } from './components/product/product.component';
 import { FormsModule } from "@angular/forms";
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ItemOrderComponent } from './components/item-order/item-order.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { FormsModule } from "@angular/forms";
     ProductNotExistsComponent,
     BadProductIdComponent,
     AddToCartComponent,
-    ProductComponent
+    ProductComponent,
+    CheckoutComponent,
+    ItemOrderComponent
   ],
   imports: [
     BrowserModule,

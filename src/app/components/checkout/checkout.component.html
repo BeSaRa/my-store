@@ -1,0 +1,9 @@
+<div *ngIf="items.length" class="flex flex-grow gap-6 justify-center items-start py-10">
+  <div id="order-items" class="w-72">
+    <ng-container *ngFor="let item of items">
+      <app-item-order (deleteItem)="onItemDeleted()" [item]="item"></app-item-order>
+    </ng-container>
+  </div>
+  <div id="checkout-form" class="w-72"></div>
+</div>
+<h1 *ngIf="!items.length" class="text-2xl flex-grow py-10 text-center"> there is no items selected to checkout!</h1>

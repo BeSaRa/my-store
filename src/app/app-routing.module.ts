@@ -7,6 +7,7 @@ import { ProductGuard } from "./guards/product.guard";
 import { ErrorPageComponent } from "./components/error-page/error-page.component";
 import { ProductNotExistsComponent } from "./components/product-not-exists/product-not-exists.component";
 import { BadProductIdComponent } from "./components/bad-product-id/bad-product-id.component";
+import { CheckoutComponent } from "./components/checkout/checkout.component";
 
 const routes: Routes = [
   {
@@ -35,9 +36,13 @@ const routes: Routes = [
     component: ProductNotExistsComponent
   },
   {
+    path: 'checkout',
+    component: CheckoutComponent
+  },
+  {
     path: '**',
     redirectTo: '404'
-  }
+  },
 ];
 
 @NgModule({

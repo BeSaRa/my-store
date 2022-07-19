@@ -1,18 +1,19 @@
 import { Cloneable } from "./cloneable";
 import { Subject } from "rxjs";
+import { Product } from "./product";
 
 export class OrderItem extends Cloneable<OrderItem> {
-  price: number = 0
+  product!: Product;
   quantity: number = 0
   total: number = 0
   changes$!: Subject<null>
 
-  private canDecrease(): boolean {
-    return this.quantity > 0
+  canDecrease(): boolean {
+    return this.quantity > 1
   }
 
   calculateTotal(): void {
-    this.total = this.quantity * this.price
+    this.total = this.quantity * this.product.price
     this.changes$.next(null)
   }
 
