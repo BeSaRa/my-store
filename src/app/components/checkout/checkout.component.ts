@@ -14,18 +14,18 @@ export class CheckoutComponent implements OnInit {
   items: OrderItem[] = [];
 
   constructor(public cartService: CartService,
-              private productService: ProductService) {
+              private _productService: ProductService) {
     this.getItems()
   }
 
   ngOnInit(): void {
-    this.productService
-      .load()
-      .subscribe((list) => {
-        this.cartService.order.addItem(list[0], 2)
-        this.cartService.order.addItem(list[2], 1)
-        this.getItems()
-      })
+    // this.productService
+    //   .load()
+    //   .subscribe((list) => {
+    //     this.cartService.order.addItem(list[0], 2)
+    //     this.cartService.order.addItem(list[2], 1)
+    //     this.getItems()
+    //   })
   }
 
   private getItems(): void {
