@@ -3,6 +3,7 @@
     <ng-container *ngFor="let item of items">
       <app-item-order (deleteItem)="onItemDeleted()" [item]="item"></app-item-order>
     </ng-container>
+    <h2 class="text-2xl">Total: {{cartService.order.totalPrice|currency}}</h2>
   </div>
   <div id="checkout-form" class="w-72"></div>
 </div>
