@@ -6,7 +6,7 @@ export class Order {
   items: Map<number, OrderItem> = new Map<number, OrderItem>()
   totalPrice: number = 0;
   totalItems: number = 0;
-  itemChanged$: Subject<null> = new Subject<null>()
+  itemChanged$: Subject<void> = new Subject<void>()
 
   constructor() {
     this.listenToItemChange();
@@ -41,12 +41,9 @@ export class Order {
   }
 
   removeItem(product: Product): void {
-    console.log(this.items);
     this.items.delete(product.id);
-    this.itemChanged$.next(null);
-    console.log(this.items);
+    this.itemChanged$.next();
   }
-
 
   private calculatePriceAndTotalItems(): void {
     this.totalPrice = 0;

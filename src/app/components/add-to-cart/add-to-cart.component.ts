@@ -20,6 +20,7 @@ export class AddToCartComponent {
 
   addToCart(): void {
     this.cartService.order.addItem(this.product, this.selectedQuantity)
+    alert(`${this.product.name} added successfully to your cart!`)
   }
 
 }

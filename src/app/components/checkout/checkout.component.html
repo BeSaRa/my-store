@@ -6,4 +6,8 @@
   </div>
   <div id="checkout-form" class="w-72"></div>
 </div>
-<h1 *ngIf="!items.length" class="text-2xl flex-grow py-10 text-center"> there is no items selected to checkout!</h1>
+<div class="py-10 w-full flex flex-col items-center justify-start" *ngIf="!items.length">
+  <h1 class="text-2xl text-center p-5"> there is no items in your cart to
+    checkout!</h1>
+  <button routerLink="/" class="button-primary mb-5">back to product list</button>
+</div>

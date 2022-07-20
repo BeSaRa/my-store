@@ -6,7 +6,7 @@ export class OrderItem extends Cloneable<OrderItem> {
   product!: Product;
   quantity: number = 0
   total: number = 0
-  changes$!: Subject<null>
+  changes$!: Subject<void>
 
   canDecrease(): boolean {
     return this.quantity > 1
@@ -14,7 +14,7 @@ export class OrderItem extends Cloneable<OrderItem> {
 
   calculateTotal(): void {
     this.total = this.quantity * this.product.price
-    this.changes$.next(null)
+    this.changes$.next()
   }
 
   addToQuantity(quantity: number): void {
