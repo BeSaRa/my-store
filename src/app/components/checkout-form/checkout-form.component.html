@@ -1,0 +1,37 @@
+<form #form="ngForm" class="flex flex-col gap-2">
+  <label class="font-semibold" for="fullName">Full Name: <span class="text-red-600">*</span></label>
+  <input type="text"
+         id="fullName"
+         required
+         minlength="3"
+         [(ngModel)]="userInfo.fullName"
+         placeholder="(minimum 3 characters.)"
+         class="py-2 rounded px-3 border outline-none border-gray-400 w-full focus:ring-2 focus:ring-offset-1 focus:ring-blue-500"
+         name="fullName">
+  <label class="font-semibold" for="address">Address: <span class="text-red-600">*</span></label>
+  <input type="text"
+         id="address"
+         required
+         minlength="4"
+         [(ngModel)]="userInfo.address"
+         placeholder="(minimum 4 characters.)"
+         class="py-2 rounded px-3 border outline-none border-gray-400 w-full focus:ring-2 focus:ring-offset-1 focus:ring-blue-500"
+         name="email">
+  <label class="font-semibold" for="creditCardNumber">Credit Card Number: <span class="text-red-600">*</span></label>
+  <input type="text"
+         [(ngModel)]="userInfo.creditCardNumber"
+         required
+         minlength="16"
+         (keydown)="validateNumber($event)"
+         maxlength="16"
+         id="creditCardNumber"
+         placeholder="(16-digit numbers)"
+         class="py-2 rounded px-3 border outline-none border-gray-400 w-full focus:ring-2 focus:ring-offset-1 focus:ring-blue-500"
+         name="creditCardNumber">
+  <span class="text-xs text-gray-400">we will never share your payment details with anyone else.</span>
+  <button [disabled]="form.invalid" (click)="submitForm()" class="button-primary disabled:bg-blue-500/50 disabled:cursor-not-allowed">Submit
+  </button>
+  <button (click)="emptyCart()" class="button-primary bg-red-600 hover:bg-red-700 active:bg-red-700 focus:ring-red-500">
+    empty cart and back to product list
+  </button>
+</form>

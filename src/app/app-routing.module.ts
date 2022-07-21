@@ -8,6 +8,8 @@ import { ErrorPageComponent } from "./components/error-page/error-page.component
 import { ProductNotExistsComponent } from "./components/product-not-exists/product-not-exists.component";
 import { BadProductIdComponent } from "./components/bad-product-id/bad-product-id.component";
 import { CheckoutComponent } from "./components/checkout/checkout.component";
+import { SuccessComponent } from "./components/success/success.component";
+import { SuccessGuard } from "./guards/success.guard";
 
 const routes: Routes = [
   {
@@ -38,6 +40,11 @@ const routes: Routes = [
   {
     path: 'checkout',
     component: CheckoutComponent
+  },
+  {
+    path: 'success',
+    component: SuccessComponent,
+    canActivate: [SuccessGuard]
   },
   {
     path: '**',

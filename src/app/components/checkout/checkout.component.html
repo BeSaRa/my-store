@@ -5,7 +5,9 @@
     </ng-container>
     <h2 class="text-2xl">Total: {{cartService.order.totalPrice|currency}}</h2>
   </div>
-  <div id="checkout-form" class="w-72"></div>
+  <div id="checkout-form" class="w-80">
+    <app-checkout-form></app-checkout-form>
+  </div>
 </div>
 <div class="py-10 w-full flex flex-col items-center justify-start" *ngIf="!items.length">
   <h1 class="text-2xl text-center p-5"> there is no items in your cart to

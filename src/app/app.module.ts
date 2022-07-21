@@ -17,6 +17,8 @@ import { ProductComponent } from './components/product/product.component';
 import { FormsModule } from "@angular/forms";
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ItemOrderComponent } from './components/item-order/item-order.component';
+import { CheckoutFormComponent } from './components/checkout-form/checkout-form.component';
+import { SuccessComponent } from './components/success/success.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ItemOrderComponent } from './components/item-order/item-order.component
     AddToCartComponent,
     ProductComponent,
     CheckoutComponent,
-    ItemOrderComponent
+    ItemOrderComponent,
+    CheckoutFormComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,
